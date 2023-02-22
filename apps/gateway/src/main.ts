@@ -7,12 +7,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.use(
-    '/swapi',
+    '/sw',
     createProxyMiddleware({
       target: 'http://localhost:3001',
       changeOrigin: true,
       pathRewrite: {
-        [`^/swapi`]: '',
+        [`^/sw`]: '',
       },
     }),
   );

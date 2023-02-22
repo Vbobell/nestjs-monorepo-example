@@ -10,6 +10,6 @@ export default {
   testEnvironment: 'node',
   roots: ['<rootDir>/apps/'],
   moduleNameMapper: {
-    '^@apps/swapi/(.*)$': '<rootDir>/apps/swapi/src/$1',
+    '^@apps/sw/(.*)$': '<rootDir>/apps/sw/src/$1',
   },
 };

@@ -1,10 +1,10 @@
 import { Controller, Get, HttpCode } from '@nestjs/common';
 
 @Controller('/')
-export class SwapiHealtyController {
+export class SwHealthController {
   @Get()
   @HttpCode(200)
   health(): string {
-    return 'health';
+    return 'success';
   }
 }

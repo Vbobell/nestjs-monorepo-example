@@ -1,9 +1,9 @@
 import { NestFactory } from '@nestjs/core';
 
-import { SwapiModule } from '@apps/swapi/swapi.module';
+import { SwModule } from '@apps/sw/sw.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(SwapiModule);
+  const app = await NestFactory.create(SwModule);
   await app.listen(3001);
 }
 bootstrap();

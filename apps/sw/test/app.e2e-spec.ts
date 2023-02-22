@@ -2,14 +2,14 @@ import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
-import { SwapiModule } from './../src/swapi.module';
+import { SwModule } from '@apps/sw/sw.module';
 
 describe('SwapiController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [SwapiModule],
+      imports: [SwModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();

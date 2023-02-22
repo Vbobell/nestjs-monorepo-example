@@ -18,13 +18,13 @@
         "tsConfigPath": "apps/gateway/tsconfig.app.json"
       }
     },
-    "swapi": {
+    "sw": {
       "type": "application",
-      "root": "apps/swapi",
+      "root": "apps/sw",
       "entryFile": "main",
-      "sourceRoot": "apps/swapi/src",
+      "sourceRoot": "apps/sw/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/swapi/tsconfig.app.json"
+        "tsConfigPath": "apps/sw/tsconfig.app.json"
       }
     }
   }
