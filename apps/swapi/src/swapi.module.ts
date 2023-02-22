@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
-import { SwapiController } from './swapi.controller';
-import { SwapiService } from './swapi.service';
+
+import { HealtyModule } from './health/health.module';
 
 @Module({
-  imports: [],
-  controllers: [SwapiController],
-  providers: [SwapiService],
+  imports: [HealtyModule],
+  controllers: [],
+  providers: [],
 })
 export class SwapiModule {}
