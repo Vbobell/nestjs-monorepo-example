@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { SwapiHealtyController } from './interface/health.controller';
+import { SwapiHealtyController } from '@apps/swapi/health/interface/health.controller';
 
 @Module({
   imports: [],

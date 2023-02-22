@@ -1,5 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { createProxyMiddleware } from 'http-proxy-middleware';
+
 import { AppModule } from './app.module';
 
 async function bootstrap() {

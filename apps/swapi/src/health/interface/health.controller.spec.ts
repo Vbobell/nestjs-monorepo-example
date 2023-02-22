@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { SwapiHealtyController } from './health.controller';
+
+import { SwapiHealtyController } from '@apps/swapi/health/interface/health.controller';
 
 describe('SwapiHealtyController', () => {
   let swapiHealtyController: SwapiHealtyController;
