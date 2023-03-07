@@ -1,25 +1,28 @@
 import { INestApplication } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
+import { TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
 import { SwModule } from '@apps/sw/sw.module';
+import { TestHelper } from '@libs/test-helper';
 
 describe('SwapiController (e2e)', () => {
+  let testHelper: TestHelper;
   let app: INestApplication;
 
   beforeEach(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [SwModule],
-    }).compile();
+    testHelper = new TestHelper();
+
+    const moduleFixture: TestingModule = await testHelper
+      .createTestingModule({
+        imports: [SwModule],
+      })
+      .compile();
 
     app = moduleFixture.createNestApplication();
     await app.init();
   });
 
   it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+    return request(app.getHttpServer()).get('/').expect(200).expect('success');
   });
 });

@@ -11,6 +11,7 @@ export default {
   roots: ['<rootDir>/apps/', '<rootDir>/libs/'],
   moduleNameMapper: {
     '^@apps/sw/(.*)$': '<rootDir>/apps/sw/src/$1',
+    '^@apps/gateway/(.*)$': '<rootDir>/apps/gateway/src/$1',
     '^@libs/test-helper': '<rootDir>/libs/test-helper/src/index.ts',
     '^@libs/test-helper/(.*)$': '<rootDir>/libs/test-helper/src/$1',
   },
