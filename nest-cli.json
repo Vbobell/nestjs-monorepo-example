@@ -26,6 +26,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/sw/tsconfig.app.json"
       }
+    },
+    "test-helper": {
+      "type": "library",
+      "root": "libs/test-helper",
+      "entryFile": "index",
+      "sourceRoot": "libs/test-helper/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/test-helper/tsconfig.lib.json"
+      }
     }
   }
 }

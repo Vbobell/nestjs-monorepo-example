@@ -8,8 +8,10 @@ export default {
   collectCoverageFrom: ['**/*.(t|j)s'],
   coverageDirectory: './coverage',
   testEnvironment: 'node',
-  roots: ['<rootDir>/apps/'],
+  roots: ['<rootDir>/apps/', '<rootDir>/libs/'],
   moduleNameMapper: {
     '^@apps/sw/(.*)$': '<rootDir>/apps/sw/src/$1',
+    '^@libs/test-helper': '<rootDir>/libs/test-helper/src/index.ts',
+    '^@libs/test-helper/(.*)$': '<rootDir>/libs/test-helper/src/$1',
   },
 };
