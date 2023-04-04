@@ -21,7 +21,9 @@
       "@apps/sw/*": ["apps/sw/src/*"],
       "@apps/gateway/*": ["apps/gateway/src/*"],
       "@libs/test-helper": ["libs/test-helper/src"],
-      "@libs/test-helper/*": ["libs/test-helper/src/*"]
+      "@libs/test-helper/*": ["libs/test-helper/src/*"],
+      "@libs/health-check": ["libs/health-check/src"],
+      "@libs/health-check/*": ["libs/health-check/src/*"]
     }
   }
 }

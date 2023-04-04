@@ -1,2 +1,4 @@
 /* eslint-disable no-restricted-imports */
-export * from './test-helper.module';
+import { TestHelper } from './test-helper.module';
+
+export { TestHelper };

@@ -2,7 +2,7 @@ import { ModuleMetadata } from '@nestjs/common';
 import { Test } from '@nestjs/testing';
 
 export class TestHelper {
-  createTestingModule(metadata: ModuleMetadata) {
+  static createTestingModule(metadata: ModuleMetadata) {
     const moduleRef = Test.createTestingModule(metadata);
 
     moduleRef.setLogger({

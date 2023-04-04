@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 
-import { HealtyModule } from '@apps/sw/health/health.module';
+import { HealthModule } from '@apps/sw/health/health.module';
 
 @Module({
-  imports: [HealtyModule],
+  imports: [HealthModule],
   controllers: [],
   providers: [],
 })

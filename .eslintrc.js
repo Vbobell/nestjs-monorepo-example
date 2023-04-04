@@ -35,6 +35,28 @@ module.exports = {
         },
         'newlines-between': 'always',
         groups: ['external', 'internal'],
+        pathGroups: [
+          {
+            pattern: '**/domain/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '**/infra/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '**/application/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '**/interface/**',
+            group: 'internal',
+            position: 'after',
+          },
+        ],
       },
     ],
   },

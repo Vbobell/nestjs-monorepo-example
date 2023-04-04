@@ -35,6 +35,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/test-helper/tsconfig.lib.json"
       }
+    },
+    "health-check": {
+      "type": "library",
+      "root": "libs/health-check",
+      "entryFile": "index",
+      "sourceRoot": "libs/health-check/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/health-check/tsconfig.lib.json"
+      }
     }
   }
 }
