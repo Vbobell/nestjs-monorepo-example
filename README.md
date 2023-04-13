@@ -1,23 +1,65 @@
 # nestjs-monorepo-example
 
-## PT-BR
+## Description
 
-Projeto para exemplificar o uso da ferramenta `nestjs` no formato `monorepo`.
+This project represent a example to use `nestjs` with monorepo structure.
 
-### Execução
+- [Nestjs - monorepo](https://docs.nestjs.com/cli/monorepo#monorepo-mode)
 
-Executar build:
+### Tool dependencies
+
+To execute project there are some dependencies.
+
+**install requirements**
+
+- [node](https://nodejs.org/en/)
+- [docker](https://docs.docker.com/)
+- [docker-compose](https://docs.docker.com/compose/compose-file/)
+- [nest-cli](https://docs.nestjs.com/cli/overview)
+
+**project dependencies**
+
+- [typescript](https://www.typescriptlang.org/docs/)
+- [nestjs](https://docs.nestjs.com/)
+- [rxjs](https://rxjs.dev/api)
+- [jest](https://jestjs.io/pt-BR/docs/getting-started)
+- [eslint](https://eslint.org/docs/latest/)
+- [prettier](https://prettier.io/docs/en/index.html)
+
+## Execution
+
+### Build
+
+This command prepare and optimize project files to production.
 
 ```bash
   npm run build
 ```
 
-Executar modo dev:
+### Start dev
+
+This command execute project on local environment.
 
 ```bash
   npm run start:dev
 ```
 
-A execução fica disponivel nas url's:
+The execution is available on url:
 
-- [API](http://localhost:3000)
+**API - Gateway**
+
+```url
+http://localhost:3000
+```
+
+**API - Gateway/SW**
+
+```url
+http://localhost:3000/sw
+```
+
+**API - SW**
+
+```url
+http://localhost:3001
+```
