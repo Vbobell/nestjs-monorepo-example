@@ -25,7 +25,6 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/no-unused-modules': 'error',
     'import/no-relative-parent-imports': 'error',
-    'no-restricted-imports': ['error', { patterns: ['.*'] }],
     'import/order': [
       'error',
       {
