@@ -1,7 +1,7 @@
 export default {
   moduleFileExtensions: ['js', 'json', 'ts'],
   rootDir: '.',
-  testRegex: '.*\\.spec\\.ts$',
+  testRegex: '.*\\unit.spec\\.ts$',
   transform: {
     '^.+\\.(t|j)s$': 'ts-jest',
   },
@@ -16,5 +16,7 @@ export default {
     '^@libs/test-helper/(.*)$': '<rootDir>/libs/test-helper/src/$1',
     '^@libs/health-check': '<rootDir>/libs/health-check/src/index.ts',
     '^@libs/health-check/(.*)$': '<rootDir>/libs/health-check/src/$1',
+    '^@libs/abstract-tools': '<rootDir>/libs/abstract-tools/src/index.ts',
+    '^@libs/abstract-tools/(.*)$': '<rootDir>/libs/abstract-tools/src/$1',
   },
 };

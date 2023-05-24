@@ -44,6 +44,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/health-check/tsconfig.lib.json"
       }
+    },
+    "abstract-tools": {
+      "type": "library",
+      "root": "libs/abstract-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/abstract-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/abstract-tools/tsconfig.lib.json"
+      }
     }
   }
 }

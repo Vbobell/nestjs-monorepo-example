@@ -23,7 +23,9 @@
       "@libs/test-helper": ["libs/test-helper/src"],
       "@libs/test-helper/*": ["libs/test-helper/src/*"],
       "@libs/health-check": ["libs/health-check/src"],
-      "@libs/health-check/*": ["libs/health-check/src/*"]
+      "@libs/health-check/*": ["libs/health-check/src/*"],
+      "@libs/abstract-tools": ["libs/abstract-tools/src"],
+      "@libs/abstract-tools/*": ["libs/abstract-tools/src/*"]
     }
   }
 }
