@@ -12,8 +12,8 @@ export default {
   moduleNameMapper: {
     '^@apps/sw/(.*)$': '<rootDir>/apps/sw/src/$1',
     '^@apps/gateway/(.*)$': '<rootDir>/apps/gateway/src/$1',
-    '^@libs/test-helper': '<rootDir>/libs/test-helper/src/index.ts',
-    '^@libs/test-helper/(.*)$': '<rootDir>/libs/test-helper/src/$1',
+    '^@libs/test-tools': '<rootDir>/libs/test-tools/src/index.ts',
+    '^@libs/test-tools/(.*)$': '<rootDir>/libs/test-tools/src/$1',
     '^@libs/health-check': '<rootDir>/libs/health-check/src/index.ts',
     '^@libs/health-check/(.*)$': '<rootDir>/libs/health-check/src/$1',
     '^@libs/abstract-tools': '<rootDir>/libs/abstract-tools/src/index.ts',

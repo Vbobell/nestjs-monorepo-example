@@ -2,7 +2,7 @@ import { TestingModule } from '@nestjs/testing';
 import { Observable } from 'rxjs';
 
 import { HealthCheckUseCase, Health } from '@libs/health-check';
-import { TestHelper } from '@libs/test-helper';
+import { TestHelper } from '@libs/test-tools';
 
 import { SwHealthController } from '@apps/sw/health/interface/health.controller';
 

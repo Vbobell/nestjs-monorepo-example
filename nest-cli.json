@@ -27,13 +27,13 @@
         "tsConfigPath": "apps/sw/tsconfig.app.json"
       }
     },
-    "test-helper": {
+    "test-tools": {
       "type": "library",
-      "root": "libs/test-helper",
+      "root": "libs/test-tools",
       "entryFile": "index",
-      "sourceRoot": "libs/test-helper/src",
+      "sourceRoot": "libs/test-tools/src",
       "compilerOptions": {
-        "tsConfigPath": "libs/test-helper/tsconfig.lib.json"
+        "tsConfigPath": "libs/test-tools/tsconfig.lib.json"
       }
     },
     "health-check": {

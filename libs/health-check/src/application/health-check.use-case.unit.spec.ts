@@ -1,6 +1,6 @@
 import { TestingModule } from '@nestjs/testing';
 
-import { TestHelper } from '@libs/test-helper';
+import { TestHelper } from '@libs/test-tools';
 
 import { HealthCheckUseCase } from '@libs/health-check/application/health-check.use-case';
 

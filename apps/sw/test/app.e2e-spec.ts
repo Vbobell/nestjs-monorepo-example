@@ -3,7 +3,7 @@ import { TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
 import { SwModule } from '@apps/sw/sw.module';
-import { TestHelper } from '@libs/test-helper';
+import { TestHelper } from '@libs/test-tools';
 
 describe('SwapiController (e2e)', () => {
   let app: INestApplication;
