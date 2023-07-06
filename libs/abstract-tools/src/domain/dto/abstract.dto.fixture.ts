@@ -6,50 +6,22 @@ export type Domain = {
   domainBoolean: boolean;
 };
 
-type CustomDomain = {
-  customStr: string;
-  customNumber: number;
-  customBoolean: boolean;
-};
-
 export class MakeDTO implements DTO<Domain> {
   dtoStr: string;
   dtoNumber: number;
   dtoBoolean: boolean;
 
-  mapDomainToDTO(domain: Domain): Partial<MakeDTO> {
+  constructor(params: Partial<MakeDTO>) {
+    this.dtoStr = params.dtoStr;
+    this.dtoNumber = params.dtoNumber;
+    this.dtoBoolean = params.dtoBoolean;
+  }
+
+  mapDTOToDomain(): Domain {
     return {
-      dtoStr: domain.domainStr,
-      dtoNumber: domain.domainNumber,
-      dtoBoolean: domain.domainBoolean,
+      domainStr: this.dtoStr,
+      domainNumber: this.dtoNumber,
+      domainBoolean: this.dtoBoolean,
     };
-  }
-
-  mapDomainsToDTO(domains: Domain[]): Partial<MakeDTO>[] {
-    return domains.map((domain: Domain) => {
-      return {
-        dtoStr: domain.domainStr,
-        dtoNumber: domain.domainNumber,
-        dtoBoolean: domain.domainBoolean,
-      };
-    });
-  }
-
-  customMapDomainToDTO(customDomain: CustomDomain): Partial<MakeDTO> {
-    return {
-      dtoStr: customDomain.customStr,
-      dtoNumber: customDomain.customNumber,
-      dtoBoolean: customDomain.customBoolean,
-    };
-  }
-
-  customMapDomainsToDTO(customDomains: CustomDomain[]): Partial<MakeDTO>[] {
-    return customDomains.map((customEntity: CustomDomain) => {
-      return {
-        dtoStr: customEntity.customStr,
-        dtoNumber: customEntity.customNumber,
-        dtoBoolean: customEntity.customBoolean,
-      };
-    });
   }
 }
