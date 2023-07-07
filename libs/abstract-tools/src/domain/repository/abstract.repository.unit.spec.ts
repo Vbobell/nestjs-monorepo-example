@@ -1,10 +1,6 @@
 import { Repository } from '@libs/abstract-tools/domain/repository/abstract.repository';
 
-import {
-  Domain,
-  Entity,
-  MakeRepository,
-} from './abstract.repository.fixture.spec';
+import { Domain, Entity, MakeRepository } from './abstract.repository.fixture';
 
 describe('Repository', () => {
   let repository: Repository<Entity, Domain>;
