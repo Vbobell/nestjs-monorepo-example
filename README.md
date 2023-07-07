@@ -52,10 +52,10 @@ The execution is available on url:
 http://localhost:3000
 ```
 
-**API - Gateway/SW**
+**API - Gateway/nest-js-with-postgres-and-api**
 
 ```url
-http://localhost:3000/sw
+http://localhost:3000/nest-js-with-postgres-and-api
 ```
 
 **API - SW**

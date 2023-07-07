@@ -3,11 +3,11 @@ import { TestingModule } from '@nestjs/testing';
 import { HealthCheckUseCase } from '@libs/health-check';
 import { TestHelper } from '@libs/test-tools';
 
-import { SwHealthController } from '@apps/sw/health/interface/health.controller';
+import { HealthController } from '@apps/nest-js-with-postgres-and-api/health/interface/health.controller';
 
-describe('SwHealthController', () => {
+describe('HealthController', () => {
   let healthCheckUseCase: HealthCheckUseCase;
-  let swHealthController: SwHealthController;
+  let healthController: HealthController;
 
   beforeEach(async () => {
     const module: TestingModule = await TestHelper.createTestingModule({
@@ -21,28 +21,30 @@ describe('SwHealthController', () => {
           }),
         },
       ],
-      controllers: [SwHealthController],
+      controllers: [HealthController],
     }).compile();
 
     healthCheckUseCase = module.get<HealthCheckUseCase>(HealthCheckUseCase);
-    swHealthController = module.get<SwHealthController>(SwHealthController);
+    healthController = module.get<HealthController>(HealthController);
   });
 
   it('should be defined', () => {
     expect(healthCheckUseCase).toBeDefined();
-    expect(swHealthController).toBeDefined();
+    expect(healthController).toBeDefined();
   });
 
   describe('When check health', () => {
     it('Then health return success', (done) => {
       jest.spyOn(healthCheckUseCase, 'execute').mockReturnValue({
-        description: 'System to integration with SWAPI',
-        name: 'sw-service',
+        description: 'Example to create API with postgres',
+        name: 'nest-js-with-postgres-and-api-service',
       });
 
-      swHealthController.health().subscribe((result) => {
-        expect(result.description).toEqual('System to integration with SWAPI');
-        expect(result.name).toEqual('sw-service');
+      healthController.health().subscribe((result) => {
+        expect(result.description).toEqual(
+          'Example to create API with postgres',
+        );
+        expect(result.name).toEqual('nest-js-with-postgres-and-api-service');
         done();
       });
     });

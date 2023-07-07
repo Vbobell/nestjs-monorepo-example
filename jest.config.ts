@@ -10,7 +10,8 @@ export default {
   testEnvironment: 'node',
   roots: ['<rootDir>/apps/', '<rootDir>/libs/'],
   moduleNameMapper: {
-    '^@apps/sw/(.*)$': '<rootDir>/apps/sw/src/$1',
+    '^@apps/nest-js-with-postgres-and-api/(.*)$':
+      '<rootDir>/apps/nest-js-with-postgres-and-api/src/$1',
     '^@apps/gateway/(.*)$': '<rootDir>/apps/gateway/src/$1',
     '^@libs/test-tools': '<rootDir>/libs/test-tools/src/index.ts',
     '^@libs/test-tools/(.*)$': '<rootDir>/libs/test-tools/src/$1',

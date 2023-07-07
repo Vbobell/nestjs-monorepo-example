@@ -7,11 +7,11 @@ services:
       context: ./
       dockerfile: ./apps/gateway/Dockerfile
     network_mode: 'host'
-  sw-api:
+  nest-js-with-postgres-and-api-api:
     ports:
       - '3001:3001'
     build:
       context: ./
-      dockerfile: ./apps/sw/Dockerfile
+      dockerfile: ./apps/nest-js-with-postgres-and-api/Dockerfile
     depends_on:
       - gateway-api

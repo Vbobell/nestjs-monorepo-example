@@ -4,9 +4,9 @@ import { Observable, of } from 'rxjs';
 import { Health, HealthCheckUseCase } from '@libs/health-check';
 
 @Controller('/')
-export class SwHealthController {
-  private readonly NAME = 'sw-service';
-  private readonly DESCRIPTION = 'System to integration with SWAPI';
+export class HealthController {
+  private readonly NAME = 'nest-js-with-postgres-and-api-service';
+  private readonly DESCRIPTION = 'Example to create API with postgres';
 
   constructor(private readonly healthCheckUseCase: HealthCheckUseCase) {}
 

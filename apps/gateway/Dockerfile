@@ -1,5 +1,5 @@
 
-FROM node:18.14.2-alpine As development
+FROM node:18.16.1-alpine As development
  
 WORKDIR /user/src/gateway-app
  
@@ -9,7 +9,7 @@ RUN npm ci
 
 USER node
 
-FROM node:18.14.2-alpine As build
+FROM node:18.16.1-alpine As build
 
 WORKDIR /user/src/gateway-app
 
@@ -25,7 +25,7 @@ RUN npm ci --omit=dev
 
 USER node
 
-FROM node:18.14.2-alpine As production
+FROM node:18.16.1-alpine As production
 
 COPY --chown=node:node --from=build /user/src/gateway-app/node_modules ./node_modules
 COPY --chown=node:node --from=build /user/src/gateway-app/dist ./dist

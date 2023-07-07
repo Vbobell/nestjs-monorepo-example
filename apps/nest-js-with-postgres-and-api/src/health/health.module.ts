@@ -2,11 +2,11 @@ import { Module } from '@nestjs/common';
 
 import { HealthCheckModule } from '@libs/health-check';
 
-import { SwHealthController } from '@apps/sw/health/interface/health.controller';
+import { HealthController } from '@apps/nest-js-with-postgres-and-api/health/interface/health.controller';
 
 @Module({
   imports: [HealthCheckModule],
-  controllers: [SwHealthController],
+  controllers: [HealthController],
   providers: [],
 })
 export class HealthModule {}

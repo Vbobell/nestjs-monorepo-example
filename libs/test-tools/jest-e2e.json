@@ -7,7 +7,7 @@
     "^.+\\.(t|j)s$": "ts-jest"
   },
   "moduleNameMapper": {
-    "^@apps/sw/(.*)$": "<rootDir>/apps/sw/src/$1",
+    "^@apps/nest-js-with-postgres-and-api/(.*)$": "<rootDir>/apps/nest-js-with-postgres-and-api/src/$1",
     "^@apps/gateway/(.*)$": "<rootDir>/apps/gateway/src/$1",
     "^@libs/health-check": "<rootDir>/libs/health-check/src/index.ts",
     "^@libs/health-check/(.*)$": "<rootDir>/libs/health-check/src/$1",

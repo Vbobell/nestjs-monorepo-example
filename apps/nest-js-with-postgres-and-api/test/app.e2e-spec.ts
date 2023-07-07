@@ -2,15 +2,15 @@ import { INestApplication } from '@nestjs/common';
 import { TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
-import { SwModule } from '@apps/sw/sw.module';
+import { NestJsWithPostgresAndApiModule } from '@apps/nest-js-with-postgres-and-api/nest-js-with-postgres-and-api.module';
 import { TestHelper } from '@libs/test-tools';
 
-describe('SwapiController (e2e)', () => {
+describe('NestJsWithPostgresAndApiModule (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await TestHelper.createTestingModule({
-      imports: [SwModule],
+      imports: [NestJsWithPostgresAndApiModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();
@@ -19,8 +19,8 @@ describe('SwapiController (e2e)', () => {
 
   it('/ (GET)', () => {
     return request(app.getHttpServer()).get('/').expect(200).expect({
-      description: 'System to integration with SWAPI',
-      name: 'sw-service',
+      description: 'Example to create API with postgres',
+      name: 'nest-js-with-postgres-and-api-service',
     });
   });
 });

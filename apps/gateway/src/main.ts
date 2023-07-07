@@ -7,12 +7,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.use(
-    '/sw',
+    '/nest-js-with-postgres-and-api',
     createProxyMiddleware({
       target: 'http://localhost:3001',
       changeOrigin: true,
       pathRewrite: {
-        [`^/sw`]: '',
+        [`^/nest-js-with-postgres-and-api`]: '',
       },
     }),
   );
