@@ -2,7 +2,7 @@ import {
   DomainParam,
   DomainReturn,
   MakeUseCase,
-} from '@libs/abstract-tools/application/use-case/abstract.use-case.fixture';
+} from './abstract.use-case.fixture';
 
 describe('MakeUseCase', () => {
   let domainParam: DomainParam;
