@@ -1,5 +1,5 @@
 import { Controller, Get, HttpCode } from '@nestjs/common';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 import { Health, HealthCheckUseCase } from '@libs/health-check';
 
@@ -13,6 +13,6 @@ export class SwHealthController {
   @Get()
   @HttpCode(200)
   health(): Observable<Health> {
-    return this.healthCheckUseCase.execute(this.DESCRIPTION, this.NAME);
+    return of(this.healthCheckUseCase.execute(this.DESCRIPTION, this.NAME));
   }
 }

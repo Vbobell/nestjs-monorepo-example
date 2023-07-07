@@ -1,7 +1,6 @@
 import { TestingModule } from '@nestjs/testing';
-import { Observable } from 'rxjs';
 
-import { HealthCheckUseCase, Health } from '@libs/health-check';
+import { HealthCheckUseCase } from '@libs/health-check';
 import { TestHelper } from '@libs/test-tools';
 
 import { SwHealthController } from '@apps/sw/health/interface/health.controller';
@@ -36,15 +35,10 @@ describe('SwHealthController', () => {
 
   describe('When check health', () => {
     it('Then health return success', (done) => {
-      jest.spyOn(healthCheckUseCase, 'execute').mockReturnValue(
-        new Observable<Health>((subscribe) => {
-          subscribe.next({
-            description: 'System to integration with SWAPI',
-            name: 'sw-service',
-          });
-          subscribe.complete();
-        }),
-      );
+      jest.spyOn(healthCheckUseCase, 'execute').mockReturnValue({
+        description: 'System to integration with SWAPI',
+        name: 'sw-service',
+      });
 
       swHealthController.health().subscribe((result) => {
         expect(result.description).toEqual('System to integration with SWAPI');
