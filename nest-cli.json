@@ -1,5 +1,58 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/gateway/src",
+  "monorepo": true,
+  "root": "apps/gateway",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/gateway/tsconfig.app.json"
+  },
+  "projects": {
+    "gateway": {
+      "type": "application",
+      "root": "apps/gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/gateway/tsconfig.app.json"
+      }
+    },
+    "nest-js-with-postgres-and-api": {
+      "type": "application",
+      "root": "apps/nest-js-with-postgres-and-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/nest-js-with-postgres-and-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nest-js-with-postgres-and-api/tsconfig.app.json"
+      }
+    },
+    "test-tools": {
+      "type": "library",
+      "root": "libs/test-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/test-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/test-tools/tsconfig.lib.json"
+      }
+    },
+    "health-check": {
+      "type": "library",
+      "root": "libs/health-check",
+      "entryFile": "index",
+      "sourceRoot": "libs/health-check/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/health-check/tsconfig.lib.json"
+      }
+    },
+    "abstract-tools": {
+      "type": "library",
+      "root": "libs/abstract-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/abstract-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/abstract-tools/tsconfig.lib.json"
+      }
+    }
+  }
 }
