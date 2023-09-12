@@ -53,6 +53,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/abstract-tools/tsconfig.lib.json"
       }
+    },
+    "database-tools": {
+      "type": "library",
+      "root": "libs/database-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/database-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database-tools/tsconfig.lib.json"
+      }
     }
   }
 }

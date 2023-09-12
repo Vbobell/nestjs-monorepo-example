@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres-nest-js-with-postgres-and-api
+    ports:
+      - 55432:5432/tcp
+    environment:
+      POSTGRES_DB: nest-js-with-postgres-and-api
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
