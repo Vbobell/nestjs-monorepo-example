@@ -22,21 +22,21 @@ export class UserEntityTypeorm {
   @CreateDateColumn({
     comment: 'Record when user has been created',
     name: 'created_at',
-    type: 'datetime',
+    type: 'timestamptz',
   })
   createdAt?: Date;
 
   @DeleteDateColumn({
     comment: 'Record when user has been deleted',
     name: 'deleted_at',
-    type: 'datetime',
+    type: 'timestamptz',
   })
   deletedAt?: Date;
 
   @UpdateDateColumn({
     comment: 'Record when user has been updated',
     name: 'updated_at',
-    type: 'datetime',
+    type: 'timestamptz',
   })
   updatedAt?: Date;
 }

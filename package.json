@@ -22,7 +22,12 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./libs/test-tools/jest-e2e.json"
+    "test:e2e": "jest --config ./libs/test-tools/jest-e2e.json",
+    "db:typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "db:typeorm:nest-js-with-postgres-and-api:migration:run": "npm run db:typeorm -- -d ./apps/nest-js-with-postgres-and-api/external/database/migration.ts migration:run",
+    "db:typeorm:nest-js-with-postgres-and-api:migration:generate": "npm run db:typeorm -- -d ./apps/nest-js-with-postgres-and-api/external/database/migration.ts migration:generate ./apps/nest-js-with-postgres-and-api/external/database/migrations/migration",
+    "db:typeorm:nest-js-with-postgres-and-api:seed:run": "npm run db:typeorm -- -d ./apps/nest-js-with-postgres-and-api/external/database/seed.ts migration:run",
+    "db:typeorm:nest-js-with-postgres-and-api:seed:create": "npm run db:typeorm migration:create ./apps/nest-js-with-postgres-and-api/external/database/seeds/seed"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
