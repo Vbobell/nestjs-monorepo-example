@@ -62,6 +62,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/database-tools/tsconfig.lib.json"
       }
+    },
+    "log-tools": {
+      "type": "library",
+      "root": "libs/log-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/log-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/log-tools/tsconfig.lib.json"
+      }
     }
   }
 }

@@ -47,6 +47,12 @@
       ],
       "@libs/database-tools/*": [
         "libs/database-tools/src/*"
+      ],
+      "@libs/log-tools": [
+        "libs/log-tools/src"
+      ],
+      "@libs/log-tools/*": [
+        "libs/log-tools/src/*"
       ]
     }
   }

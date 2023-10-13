@@ -3,6 +3,8 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Observable, from, map } from 'rxjs';
 import { Repository } from 'typeorm';
 
+import { loggerOperator } from '@libs/log-tools/infrastructure/logger-operator';
+
 import { User } from '@apps/nest-js-with-postgres-and-api/user/domain/user';
 import { UserRepository } from '@apps/nest-js-with-postgres-and-api/user/domain/user-repository';
 import { UserEntityTypeorm } from '@apps/nest-js-with-postgres-and-api/user/infrastructure/database/typeorm/entities/user.entity';
@@ -23,6 +25,17 @@ export class UserRepositoryTypeorm
       map((userEntities: UserEntityTypeorm[]) =>
         this.mapEntitiesToDomain(userEntities),
       ),
+      loggerOperator(this.logger, 'UserRepositoryTypeorm', {
+        initLog: {
+          message: 'getUsers | execution started',
+        },
+        endLog: {
+          message: 'getUsers | finished execution',
+        },
+        errorLog: {
+          message: 'getUsers | execution with error',
+        },
+      }),
     );
   }
 
