@@ -12,6 +12,8 @@ const config = () => {
       url: process.env.DATABASE_URL,
       synchronize: process.env.DATABASE_SYNC,
       type: process.env.DATABASE_TYPE,
+      password: process.env.DATABASE_USER,
+      username: process.env.DATABASE_PASSWORD,
     },
   };
 };

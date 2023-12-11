@@ -6,10 +6,7 @@
   ],
   "rootDir": "../../",
   "testEnvironment": "node",
-  "testRegex": ".e2e.spec.ts$",
-  "setupFiles": [
-    "<rootDir>/libs/test-tools/src/infrastructure/env/test.env.ts"
-  ],
+  "testRegex": ".integration.spec.ts$",
   "transform": {
     "^.+\\.(t|j)s$": "ts-jest"
   },
