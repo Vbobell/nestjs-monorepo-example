@@ -1,3 +1,4 @@
+import { ConfigModule } from '@nestjs/config';
 import { TestingModule } from '@nestjs/testing';
 
 import { HealthCheckUseCase } from '@libs/health-check';
@@ -11,6 +12,7 @@ describe('HealthController', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await TestHelper.createTestingModule({
+      imports: [ConfigModule],
       providers: [
         {
           provide: HealthCheckUseCase,
