@@ -18,10 +18,7 @@ export class DatabaseTypeORMModule {
               configService.get<DatabaseConfig<DatabaseType>>('database');
 
             return {
-              entities: [
-                __dirname +
-                  '/**/infrastructure/repository/**/entities/*.entity{.ts,.js}',
-              ],
+              autoLoadEntities: true,
               synchronize: databaseConfig?.synchronize,
               type,
               url: databaseConfig?.url,
