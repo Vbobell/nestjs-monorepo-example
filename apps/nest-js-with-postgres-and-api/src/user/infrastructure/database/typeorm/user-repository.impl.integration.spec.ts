@@ -54,28 +54,32 @@ describe('UserRepositoryTypeorm', () => {
     let user2: UserEntityTypeorm;
 
     beforeEach(async () => {
-      const result = await repository.insert({
-        name: 'John',
-      });
+      const result = await repository.insert([
+        {
+          name: 'John',
+        },
+        {
+          name: 'Joana',
+        },
+      ]);
 
-      user = result.raw;
+      user = result.raw[0];
+      user2 = result.raw[1];
+    });
 
-      const result2 = await repository.insert({
-        name: 'Joana',
-      });
-
-      user2 = result2.raw;
+    afterEach(async () => {
+      await repository.clear();
     });
 
     describe('When execute', () => {
-      test('Then user not found', async (done) => {
+      test('Then user not found', (done) => {
         userRepository
           .getUsers([
             {
-              id: 30,
+              id: 10000,
             },
             {
-              id: 40,
+              id: 10001,
             },
           ])
           .subscribe((users) => {
@@ -84,7 +88,7 @@ describe('UserRepositoryTypeorm', () => {
           });
       });
 
-      test('Then return user successfully', async (done) => {
+      test('Then return user successfully', (done) => {
         userRepository
           .getUsers([
             {

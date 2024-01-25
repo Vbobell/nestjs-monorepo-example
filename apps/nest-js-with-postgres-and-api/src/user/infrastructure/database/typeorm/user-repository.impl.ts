@@ -24,7 +24,7 @@ export class UserRepositoryTypeorm
     return from(
       this.repository.find({
         where: {
-          id: In(userIds),
+          id: In(userIds.map(({ id }) => id)),
         },
       }),
     ).pipe(
