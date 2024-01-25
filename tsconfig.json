@@ -21,39 +21,17 @@
       "@apps/nest-js-with-postgres-and-api/*": [
         "apps/nest-js-with-postgres-and-api/src/*"
       ],
-      "@apps/gateway/*": [
-        "apps/gateway/src/*"
-      ],
-      "@libs/test-tools": [
-        "libs/test-tools/src"
-      ],
-      "@libs/test-tools/*": [
-        "libs/test-tools/src/*"
-      ],
-      "@libs/health-check": [
-        "libs/health-check/src"
-      ],
-      "@libs/health-check/*": [
-        "libs/health-check/src/*"
-      ],
-      "@libs/abstract-tools": [
-        "libs/abstract-tools/src"
-      ],
-      "@libs/abstract-tools/*": [
-        "libs/abstract-tools/src/*"
-      ],
-      "@libs/database-tools": [
-        "libs/database-tools/src"
-      ],
-      "@libs/database-tools/*": [
-        "libs/database-tools/src/*"
-      ],
-      "@libs/log-tools": [
-        "libs/log-tools/src"
-      ],
-      "@libs/log-tools/*": [
-        "libs/log-tools/src/*"
-      ]
+      "@apps/gateway/*": ["apps/gateway/src/*"],
+      "@libs/test-tools": ["libs/test-tools/src"],
+      "@libs/test-tools/*": ["libs/test-tools/src/*"],
+      "@libs/health-check": ["libs/health-check/src"],
+      "@libs/health-check/*": ["libs/health-check/src/*"],
+      "@libs/abstract-tools": ["libs/abstract-tools/src"],
+      "@libs/abstract-tools/*": ["libs/abstract-tools/src/*"],
+      "@libs/database-tools": ["libs/database-tools/src"],
+      "@libs/database-tools/*": ["libs/database-tools/src/*"],
+      "@libs/log-tools": ["libs/log-tools/src"],
+      "@libs/log-tools/*": ["libs/log-tools/src/*"]
     }
   }
 }
