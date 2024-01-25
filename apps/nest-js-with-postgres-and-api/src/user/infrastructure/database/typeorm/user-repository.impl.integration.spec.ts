@@ -1,6 +1,7 @@
 import { ConfigModule } from '@nestjs/config';
 import { TestingModule } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
 import { DatabaseModule } from '@libs/database-tools';
 import { TestHelper } from '@libs/test-tools';
@@ -21,9 +22,10 @@ const config = () => {
 };
 
 describe('UserRepositoryTypeorm', () => {
-  let userRepositoryTypeorm: UserRepositoryTypeorm;
+  let repository: Repository<UserEntityTypeorm>;
+  let userRepository: UserRepositoryTypeorm;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     const module: TestingModule = await TestHelper.createTestingModule({
       imports: [
         ConfigModule.forRoot({
@@ -36,12 +38,67 @@ describe('UserRepositoryTypeorm', () => {
       providers: [UserRepositoryTypeorm],
     }).compile();
 
-    userRepositoryTypeorm = module.get<UserRepositoryTypeorm>(
-      UserRepositoryTypeorm,
+    repository = module.get<Repository<UserEntityTypeorm>>(
+      'UserEntityTypeormRepository',
     );
+    userRepository = module.get<UserRepositoryTypeorm>(UserRepositoryTypeorm);
   });
 
   it('should be defined', () => {
-    expect(userRepositoryTypeorm).toBeDefined();
+    expect(repository).toBeDefined();
+    expect(userRepository).toBeDefined();
+  });
+
+  describe('getUsers', () => {
+    let user: UserEntityTypeorm;
+    let user2: UserEntityTypeorm;
+
+    beforeEach(async () => {
+      const result = await repository.insert({
+        name: 'John',
+      });
+
+      user = result.raw;
+
+      const result2 = await repository.insert({
+        name: 'Joana',
+      });
+
+      user2 = result2.raw;
+    });
+
+    describe('When execute', () => {
+      test('Then user not found', async (done) => {
+        userRepository
+          .getUsers([
+            {
+              id: 30,
+            },
+            {
+              id: 40,
+            },
+          ])
+          .subscribe((users) => {
+            expect(users).toHaveLength(0);
+            done();
+          });
+      });
+
+      test('Then return user successfully', async (done) => {
+        userRepository
+          .getUsers([
+            {
+              id: user.id,
+            },
+            {
+              id: user2.id,
+            },
+          ])
+          .subscribe((users) => {
+            expect(users).toHaveLength(2);
+            done();
+          });
+      });
+    });
   });
 });

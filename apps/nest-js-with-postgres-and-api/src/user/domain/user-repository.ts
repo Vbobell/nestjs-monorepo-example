@@ -7,5 +7,5 @@ import { User } from '@apps/nest-js-with-postgres-and-api/user/domain/user';
 
 @Injectable()
 export abstract class UserRepository<Entity> extends Repository<Entity, User> {
-  abstract getUsers(): Observable<User[]>;
+  abstract getUsers(userIds: Pick<User, 'id'>[]): Observable<User[]>;
 }

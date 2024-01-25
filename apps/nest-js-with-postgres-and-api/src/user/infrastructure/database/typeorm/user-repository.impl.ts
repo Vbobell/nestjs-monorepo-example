@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Observable, from, map } from 'rxjs';
-import { Repository } from 'typeorm';
+import { In, Repository } from 'typeorm';
 
 import { loggerOperator } from '@libs/log-tools/infrastructure/logger-operator';
 
@@ -20,8 +20,14 @@ export class UserRepositoryTypeorm
     private readonly repository: Repository<UserEntityTypeorm>,
   ) {}
 
-  getUsers(): Observable<User[]> {
-    return from(this.repository.find()).pipe(
+  getUsers(userIds: Pick<User, 'id'>[]): Observable<User[]> {
+    return from(
+      this.repository.find({
+        where: {
+          id: In(userIds),
+        },
+      }),
+    ).pipe(
       map((userEntities: UserEntityTypeorm[]) =>
         this.mapEntitiesToDomain(userEntities),
       ),

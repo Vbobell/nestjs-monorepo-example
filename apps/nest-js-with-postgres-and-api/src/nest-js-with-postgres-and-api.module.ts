@@ -21,7 +21,9 @@ const config = () => {
 @Module({
   imports: [
     ConfigModule.forRoot({
-      envFilePath: [__dirname.replace('dist/', '') + '/.env'],
+      envFilePath: [
+        __dirname.replace('dist/', '') + `/.env.${process.env.NODE_ENV}`,
+      ],
       load: [config],
     }),
     DatabaseModule.forRoot('postgres'),
