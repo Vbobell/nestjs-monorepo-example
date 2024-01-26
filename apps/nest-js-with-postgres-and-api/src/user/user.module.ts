@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { GetUsersUseCase } from '@apps/nest-js-with-postgres-and-api/user/application/get-users/get-users.use-case';
 import { UserRepository } from '@apps/nest-js-with-postgres-and-api/user/domain/user-repository';
 import { UserEntityTypeorm } from '@apps/nest-js-with-postgres-and-api/user/infrastructure/database/typeorm/entities/user.entity';
 import { UserRepositoryTypeorm } from '@apps/nest-js-with-postgres-and-api/user/infrastructure/database/typeorm/user-repository.impl';
@@ -12,6 +13,7 @@ import { UserRepositoryTypeorm } from '@apps/nest-js-with-postgres-and-api/user/
       provide: UserRepository,
       useClass: UserRepositoryTypeorm,
     },
+    GetUsersUseCase,
   ],
 })
 export class UserModule {}
