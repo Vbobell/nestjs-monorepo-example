@@ -6,6 +6,8 @@ import { UserRepository } from '@apps/nest-js-with-postgres-and-api/user/domain/
 import { UserEntityTypeorm } from '@apps/nest-js-with-postgres-and-api/user/infrastructure/database/typeorm/entities/user.entity';
 import { UserRepositoryTypeorm } from '@apps/nest-js-with-postgres-and-api/user/infrastructure/database/typeorm/user-repository.impl';
 
+import { GetUsersController } from './interface/get-users/get-users.controller';
+
 @Module({
   imports: [TypeOrmModule.forFeature([UserEntityTypeorm])],
   providers: [
@@ -15,5 +17,6 @@ import { UserRepositoryTypeorm } from '@apps/nest-js-with-postgres-and-api/user/
     },
     GetUsersUseCase,
   ],
+  controllers: [GetUsersController],
 })
 export class UserModule {}
