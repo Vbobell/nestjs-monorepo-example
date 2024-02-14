@@ -18,13 +18,13 @@
         "tsConfigPath": "apps/gateway/tsconfig.app.json"
       }
     },
-    "nest-js-with-postgres-and-api": {
+    "postgres-and-api-example": {
       "type": "application",
-      "root": "apps/nest-js-with-postgres-and-api",
+      "root": "apps/postgres-and-api-example",
       "entryFile": "main",
-      "sourceRoot": "apps/nest-js-with-postgres-and-api/src",
+      "sourceRoot": "apps/postgres-and-api-example/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/nest-js-with-postgres-and-api/tsconfig.app.json"
+        "tsConfigPath": "apps/postgres-and-api-example/tsconfig.app.json"
       }
     },
     "test-tools": {

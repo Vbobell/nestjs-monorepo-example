@@ -18,8 +18,8 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@apps/nest-js-with-postgres-and-api/*": [
-        "apps/nest-js-with-postgres-and-api/src/*"
+      "@apps/postgres-and-api-example/*": [
+        "apps/postgres-and-api-example/src/*"
       ],
       "@apps/gateway/*": ["apps/gateway/src/*"],
       "@libs/test-tools": ["libs/test-tools/src"],
