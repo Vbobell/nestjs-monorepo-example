@@ -36,6 +36,16 @@ module.exports = {
         groups: ['external', 'internal'],
         pathGroups: [
           {
+            pattern: '@libs/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
+            pattern: '@apps/**',
+            group: 'internal',
+            position: 'after',
+          },
+          {
             pattern: '**/domain/**',
             group: 'internal',
             position: 'after',

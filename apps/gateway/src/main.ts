@@ -13,6 +13,7 @@ async function bootstrap() {
       changeOrigin: true,
       pathRewrite: {
         [`^/nest-js-with-postgres-and-api`]: '',
+        [`^/nest-js-with-postgres-and-api/api`]: 'api',
       },
     }),
   );

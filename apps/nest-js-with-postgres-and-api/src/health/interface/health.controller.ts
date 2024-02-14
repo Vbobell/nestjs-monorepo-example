@@ -1,4 +1,5 @@
 import { Controller, Get, HttpCode } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Observable, of } from 'rxjs';
 
 import { Health, HealthCheckUseCase } from '@libs/health-check';
@@ -11,6 +12,7 @@ export class HealthController {
   constructor(private readonly healthCheckUseCase: HealthCheckUseCase) {}
 
   @Get()
+  @ApiTags('health')
   @HttpCode(200)
   health(): Observable<Health> {
     return of(this.healthCheckUseCase.execute(this.DESCRIPTION, this.NAME));

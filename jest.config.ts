@@ -19,5 +19,9 @@ export default {
     '^@libs/health-check/(.*)$': '<rootDir>/libs/health-check/src/$1',
     '^@libs/abstract-tools': '<rootDir>/libs/abstract-tools/src/index.ts',
     '^@libs/abstract-tools/(.*)$': '<rootDir>/libs/abstract-tools/src/$1',
+    '^@libs/log-tools': '<rootDir>/libs/log-tools/src/index.ts',
+    '^@libs/log-tools/(.*)$': '<rootDir>/libs/log-tools/src/$1',
+    '^@libs/database-tools': '<rootDir>/libs/database-tools/src/index.ts',
+    '^@libs/database-tools/(.*)$': '<rootDir>/libs/database-tools/src/$1',
   },
 };

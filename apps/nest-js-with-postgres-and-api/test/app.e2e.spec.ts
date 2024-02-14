@@ -2,8 +2,9 @@ import { INestApplication } from '@nestjs/common';
 import { TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 
-import { NestJsWithPostgresAndApiModule } from '@apps/nest-js-with-postgres-and-api/nest-js-with-postgres-and-api.module';
 import { TestHelper } from '@libs/test-tools';
+
+import { NestJsWithPostgresAndApiModule } from '@apps/nest-js-with-postgres-and-api/nest-js-with-postgres-and-api.module';
 
 describe('NestJsWithPostgresAndApiModule (e2e)', () => {
   let app: INestApplication;

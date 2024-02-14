@@ -27,7 +27,11 @@
       "@libs/health-check": ["libs/health-check/src"],
       "@libs/health-check/*": ["libs/health-check/src/*"],
       "@libs/abstract-tools": ["libs/abstract-tools/src"],
-      "@libs/abstract-tools/*": ["libs/abstract-tools/src/*"]
+      "@libs/abstract-tools/*": ["libs/abstract-tools/src/*"],
+      "@libs/database-tools": ["libs/database-tools/src"],
+      "@libs/database-tools/*": ["libs/database-tools/src/*"],
+      "@libs/log-tools": ["libs/log-tools/src"],
+      "@libs/log-tools/*": ["libs/log-tools/src/*"]
     }
   }
 }

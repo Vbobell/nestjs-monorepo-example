@@ -53,6 +53,24 @@
       "compilerOptions": {
         "tsConfigPath": "libs/abstract-tools/tsconfig.lib.json"
       }
+    },
+    "database-tools": {
+      "type": "library",
+      "root": "libs/database-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/database-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database-tools/tsconfig.lib.json"
+      }
+    },
+    "log-tools": {
+      "type": "library",
+      "root": "libs/log-tools",
+      "entryFile": "index",
+      "sourceRoot": "libs/log-tools/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/log-tools/tsconfig.lib.json"
+      }
     }
   }
 }
