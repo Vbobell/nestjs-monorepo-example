@@ -1,4 +1,4 @@
-PROJECTS := nest-js-with-postgres-and-api
+PROJECTS := postgres-and-api-example
 
 start-dependencies:
 	docker compose -f ./apps/**/*.yml up -d
