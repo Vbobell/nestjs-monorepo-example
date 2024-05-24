@@ -8,4 +8,4 @@ start-dependencies:
 	done
 	
 stop-dependencies:
-	docker-compose -f ./apps/**/*.yml down
+	docker compose -f ./apps/**/*.yml down
