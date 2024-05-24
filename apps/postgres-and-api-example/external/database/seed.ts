@@ -15,9 +15,7 @@ export const AppDataSource = new DataSource({
   entities: [
     './apps/postgres-and-api-example/src/**/infrastructure/database/typeorm/entities/*.entity.ts',
   ],
-  migrations: [
-    './apps/postgres-and-api-example/external/database/seeds/*.ts',
-  ],
+  migrations: ['./apps/postgres-and-api-example/external/database/seeds/*.ts'],
   password: process.env.DATABASE_USER,
   username: process.env.DATABASE_PASSWORD,
 });
