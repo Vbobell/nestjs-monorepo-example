@@ -2,16 +2,18 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as express from 'express';
 
-import { AwsSqsAndApiExampleModule } from '@apps/aws-sqs-and-api-example/aws-sqs-and-api-example.module';
+import { SqsConsumerExampleModule } from '@apps/sqs-consumer-example/sqs-consumer-example.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AwsSqsAndApiExampleModule);
+  const app = await NestFactory.create(SqsConsumerExampleModule);
 
   const config = new DocumentBuilder()
-    .setTitle('aws-sqs-and-api-example')
-    .setDescription('This project has a example from use nest js with sqs')
+    .setTitle('sqs-consumer-example')
+    .setDescription(
+      'This project has a example from use nest js and consumer sqs queue',
+    )
     .setVersion('1.0')
-    .addTag('aws-sqs-and-api-example')
+    .addTag('sqs-consumer-example')
     .build();
 
   app.use(express.json());

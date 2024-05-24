@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  localstack-aws-sqs-and-api-example:
+  localstack-sqs-consumer-example:
     image: localstack/localstack:latest
     ports:
       - '9330:9330'

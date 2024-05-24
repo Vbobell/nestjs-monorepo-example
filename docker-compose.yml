@@ -15,12 +15,11 @@ services:
       dockerfile: ./apps/postgres-and-api-example/Dockerfile
     depends_on:
       - gateway-api
-  aws-sqs-and-api-example-api:
+  sqs-consumer-example-api:
     ports:
       - '3002:3002'
     build:
       context: ./
-      dockerfile: ./apps/aws-sqs-and-api-example/Dockerfile
+      dockerfile: ./apps/sqs-consumer-example/Dockerfile
     depends_on:
       - gateway-api
-

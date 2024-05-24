@@ -1,14 +1,15 @@
-import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
-import { AwsSqsAndApiExampleModule } from './../src/aws-sqs-and-api-example.module';
 
-describe('AwsSqsAndApiExampleController (e2e)', () => {
+import { SqsAndApiExampleModule } from '@apps/sqs-consumer-example/sqs-consumer-example.module';
+
+describe('SqsAndApiExampleModule (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AwsSqsAndApiExampleModule],
+      imports: [SqsAndApiExampleModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();

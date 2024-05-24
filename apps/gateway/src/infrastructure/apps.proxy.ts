@@ -9,7 +9,7 @@ export const appsToProxy: AppProxy[] = [
     port: 3001,
   },
   {
-    route: 'aws-sqs-and-api-example',
+    route: 'sqs-consumer-example',
     port: 3002,
   },
 ];
