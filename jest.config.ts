@@ -12,6 +12,8 @@ export default {
   moduleNameMapper: {
     '^@apps/postgres-and-api-example/(.*)$':
       '<rootDir>/apps/postgres-and-api-example/src/$1',
+    '^@apps/aws-sqs-and-api-example/(.*)$':
+      '<rootDir>/apps/aws-sqs-and-api-example/src/$1',
     '^@apps/gateway/(.*)$': '<rootDir>/apps/gateway/src/$1',
     '^@libs/test-tools': '<rootDir>/libs/test-tools/src/index.ts',
     '^@libs/test-tools/(.*)$': '<rootDir>/libs/test-tools/src/$1',

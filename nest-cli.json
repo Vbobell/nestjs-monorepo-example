@@ -71,6 +71,15 @@
       "compilerOptions": {
         "tsConfigPath": "libs/log-tools/tsconfig.lib.json"
       }
+    },
+    "aws-sqs-and-api-example": {
+      "type": "application",
+      "root": "apps/aws-sqs-and-api-example",
+      "entryFile": "main",
+      "sourceRoot": "apps/aws-sqs-and-api-example/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/aws-sqs-and-api-example/tsconfig.app.json"
+      }
     }
   }
 }

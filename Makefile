@@ -1,4 +1,4 @@
-PROJECTS := postgres-and-api-example
+PROJECTS := postgres-and-api-example aws-sqs-and-api-example
 
 start-dependencies:
 	docker compose -f ./apps/**/*.yml up -d

@@ -1,0 +1,7 @@
+{
+  "Attributes": {
+    "DelaySeconds": "5",
+    "ReceiveMessageWaitTimeSeconds": "0",
+    "VisibilityTimeout": "10"
+  }
+}
