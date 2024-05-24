@@ -2,20 +2,23 @@ import { NestFactory } from '@nestjs/core';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 import { AppModule } from '@apps/gateway/app.module';
+import { appsToProxy } from '@apps/gateway/infrastructure/apps.proxy';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.use(
-    '/postgres-and-api-example',
-    createProxyMiddleware({
-      target: 'http://localhost:3001',
-      changeOrigin: true,
-      pathRewrite: {
-        [`^/postgres-and-api-example`]: '',
-        [`^/postgres-and-api-example/api`]: 'api',
-      },
-    }),
+  appsToProxy.forEach((appToProxy) =>
+    app.use(
+      `/${appToProxy.route}`,
+      createProxyMiddleware({
+        target: `http://localhost:${appToProxy.port}`,
+        changeOrigin: true,
+        pathRewrite: {
+          [`^/${appToProxy.route}`]: '',
+          [`^/${appToProxy.route}/api`]: 'api',
+        },
+      }),
+    ),
   );
 
   await app.listen(3000);
